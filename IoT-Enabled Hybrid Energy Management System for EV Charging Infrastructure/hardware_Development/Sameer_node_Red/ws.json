@@ -1,0 +1,1021 @@
+[
+    {
+        "id": "f02c832d5bf6c4c6",
+        "type": "tab",
+        "label": "Vi_Filter",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "83334fabba75bde4",
+        "type": "inject",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "65a8d359063efdea"
+            ]
+        ]
+    },
+    {
+        "id": "65a8d359063efdea",
+        "type": "http request",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2749650/feeds/last.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 290,
+        "y": 220,
+        "wires": [
+            [
+                "67d50545b1164f6f"
+            ]
+        ]
+    },
+    {
+        "id": "67d50545b1164f6f",
+        "type": "json",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 510,
+        "y": 220,
+        "wires": [
+            [
+                "4b41bba0dad4b854"
+            ]
+        ]
+    },
+    {
+        "id": "42d24fa8db5df70e",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "Solar_voltage1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f3c519ce18ca169d",
+        "type": "inject",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 820,
+        "wires": [
+            [
+                "57817f5292c2b83c"
+            ]
+        ]
+    },
+    {
+        "id": "57817f5292c2b83c",
+        "type": "http request",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2750845/feeds/last.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 820,
+        "wires": [
+            [
+                "277c5b7d079bd9b2"
+            ]
+        ]
+    },
+    {
+        "id": "277c5b7d079bd9b2",
+        "type": "json",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 510,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e52e6da6201ca1af",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "PCC_Voltage",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "668061702d14e132",
+        "type": "inject",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "8",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 820,
+        "wires": [
+            [
+                "1f156abc8ed8d3d6"
+            ]
+        ]
+    },
+    {
+        "id": "1f156abc8ed8d3d6",
+        "type": "http request",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2750723/feeds/last.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 820,
+        "wires": [
+            [
+                "8d551db3203247ef"
+            ]
+        ]
+    },
+    {
+        "id": "8d551db3203247ef",
+        "type": "json",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 510,
+        "y": 820,
+        "wires": [
+            [
+                "9cb06e51375718ae"
+            ]
+        ]
+    },
+    {
+        "id": "41fa64acacd16887",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "PCC_Current",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "a6cd27a231983ac2",
+        "type": "inject",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "7",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "02bd170cb8dc6a14"
+            ]
+        ]
+    },
+    {
+        "id": "02bd170cb8dc6a14",
+        "type": "http request",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2749674/feeds/last.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 540,
+        "wires": [
+            [
+                "f1c9418f6767b598"
+            ]
+        ]
+    },
+    {
+        "id": "f1c9418f6767b598",
+        "type": "json",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 530,
+        "y": 540,
+        "wires": [
+            [
+                "c1a7b27ae12ffe6a"
+            ]
+        ]
+    },
+    {
+        "id": "71b5feb0d32dca24",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "ESS_Voltage",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "2d948e6e30ea8101",
+        "type": "inject",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "12",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 1340,
+        "wires": [
+            [
+                "892a6fa8b6ec069b"
+            ]
+        ]
+    },
+    {
+        "id": "892a6fa8b6ec069b",
+        "type": "http request",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2750845/feeds/last.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 1340,
+        "wires": [
+            [
+                "82bc9ec64939a4b0"
+            ]
+        ]
+    },
+    {
+        "id": "82bc9ec64939a4b0",
+        "type": "json",
+        "z": "f02c832d5bf6c4c6",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 530,
+        "y": 1340,
+        "wires": [
+            [
+                "ebf06f31b5688849"
+            ]
+        ]
+    },
+    {
+        "id": "0c118f47abc2785e",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "FS_Current_level",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "4b41bba0dad4b854",
+        "type": "function",
+        "z": "f02c832d5bf6c4c6",
+        "name": "function 1",
+        "func": "\n// Remove unwanted fields\nlet data = msg.payload;\n\n// Keep only the desired fields\nlet filteredData = {\n    field1: data.field1,\n    field2: data.field2,\n    field3: data.field3,\n    field4: data.field4,\n    field5: data.field5,\n    field6: data.field6,\n    field7: data.field7,\n    field8: data.field8\n};\n\n// Update msg.payload with the filtered data\nmsg.payload = filteredData;\n\nreturn msg;\n",
+        "outputs": 8,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 220,
+        "wires": [
+            [
+                "42d24fa8db5df70e"
+            ],
+            [
+                "f48c3502eec4e3d1"
+            ],
+            [
+                "07e44b9bca339142"
+            ],
+            [
+                "f01d39a91d58cedd"
+            ],
+            [
+                "fcf46378f32f2125"
+            ],
+            [
+                "3e2ec9767a4a428e"
+            ],
+            [
+                "ead791bdd0c83947"
+            ],
+            [
+                "19a6f8e0557c57d6"
+            ]
+        ]
+    },
+    {
+        "id": "f48c3502eec4e3d1",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "Solar_current1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "07e44b9bca339142",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "Solar_power1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f01d39a91d58cedd",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "solar_temp1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "fcf46378f32f2125",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "solar_irradiation",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "3e2ec9767a4a428e",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "solar_voltage2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ead791bdd0c83947",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "solar_current2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "19a6f8e0557c57d6",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "solar_power2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c1a7b27ae12ffe6a",
+        "type": "function",
+        "z": "f02c832d5bf6c4c6",
+        "name": "function 2",
+        "func": "\n// Remove unwanted fields\nlet data = msg.payload;\n\n// Keep only the desired fields\nlet filteredData = {\n    field1: data.field1,\n    field2: data.field2,\n    field3: data.field3,\n    field4: data.field4,\n    field5: data.field5,\n    field6: data.field6,\n    \n};\n\n// Update msg.payload with the filtered data\nmsg.payload = filteredData;\n\nreturn msg;\n",
+        "outputs": 6,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 540,
+        "wires": [
+            [
+                "71b5feb0d32dca24"
+            ],
+            [
+                "9979f08fcddea006"
+            ],
+            [
+                "9a51e0c2a922487f"
+            ],
+            [
+                "014a5ae93ddb4aea"
+            ],
+            [
+                "86077851a8a6d125"
+            ],
+            [
+                "1af889155099c7c6"
+            ]
+        ]
+    },
+    {
+        "id": "9979f08fcddea006",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "ESS_Current",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "9a51e0c2a922487f",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "ESS_Power",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "014a5ae93ddb4aea",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "Grid_voltage1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "86077851a8a6d125",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "Grid_current",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "1af889155099c7c6",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "Grid_power1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "9cb06e51375718ae",
+        "type": "function",
+        "z": "f02c832d5bf6c4c6",
+        "name": "function 3",
+        "func": "\n// Remove unwanted fields\nlet data = msg.payload;\n\n// Keep only the desired fields\nlet filteredData = {\n    field1: data.field1,\n    field2: data.field2,\n    field3: data.field3,\n    field4: data.field4,\n    field5: data.field5,\n    field6: data.field6,\n    field7: data.field7,\n    field8: data.field8\n};\n\n// Update msg.payload with the filtered data\nmsg.payload = filteredData;\n\nreturn msg;\n",
+        "outputs": 8,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 820,
+        "wires": [
+            [
+                "e52e6da6201ca1af"
+            ],
+            [
+                "41fa64acacd16887"
+            ],
+            [
+                "3d82023937472d39"
+            ],
+            [
+                "89dddba40ea1de77"
+            ],
+            [
+                "a301138f966798f3"
+            ],
+            [
+                "78c5ca5222c175d7"
+            ],
+            [
+                "4bb3fc04726013c9"
+            ],
+            [
+                "10ec15f4764313ba"
+            ]
+        ]
+    },
+    {
+        "id": "3d82023937472d39",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "PCC_Power",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "89dddba40ea1de77",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "PCC_Avaliable_Power",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "a301138f966798f3",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "Swapping_Voltage",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "78c5ca5222c175d7",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "Swapping_Power",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "4bb3fc04726013c9",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "Numeric_Display",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "10ec15f4764313ba",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "Swapping",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "a8f0649c74eca98b",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "FS_Voltage_level",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "ebf06f31b5688849",
+        "type": "function",
+        "z": "f02c832d5bf6c4c6",
+        "name": "function 4",
+        "func": "// Remove unwanted fields\nlet data = msg.payload;\n\n// Keep only the desired fields\nlet filteredData = {\n    field1: data.field1,\n    field2: data.field2,\n    field3: data.field3,\n    field4: data.field4,\n    field5: data.field5,\n    field6: data.field6,\n    field7: data.field7,\n    field8: data.field8\n};\n\n// Update msg.payload with the filtered data\nmsg.payload = filteredData;\n\nreturn msg;\n",
+        "outputs": 8,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1340,
+        "wires": [
+            [
+                "a8f0649c74eca98b"
+            ],
+            [
+                "0c118f47abc2785e"
+            ],
+            [
+                "adb3b7480f1a78ad"
+            ],
+            [
+                "879014496e1c2006"
+            ],
+            [
+                "0cbb5d54de40ed6e"
+            ],
+            [
+                "4cd58321e6f0d306"
+            ],
+            [
+                "767f0a82e637bf0c"
+            ],
+            [
+                "1b92ddfcd82bad5d"
+            ]
+        ]
+    },
+    {
+        "id": "adb3b7480f1a78ad",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "FS_SOC",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "879014496e1c2006",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "FS_Sate_of_Health(SOH)",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "0cbb5d54de40ed6e",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "ROH - Remaining Operating Hour",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "4cd58321e6f0d306",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "Battery life cycle",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "767f0a82e637bf0c",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "Temperature monitoring",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "1b92ddfcd82bad5d",
+        "type": "debug",
+        "z": "f02c832d5bf6c4c6",
+        "name": "Charging_Time",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 1520,
+        "wires": []
+    }
+]

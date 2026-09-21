@@ -1,0 +1,21 @@
+Circuit: * C:\Users\IPTIF\Desktop\buck\buck.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Fri Jun 14 12:22:30 2024
+Total elapsed time: 0.249 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 100693
+traniter = 100688
+tranpoints = 30787
+accept = 23877
+rejected = 6910
+matrix size = 11
+fillins = 3
+solver = Normal
+Matrix Compiler1:      40 opcodes  0.1/[0.0]/0.0
+Matrix Compiler2: off  [0.0]/0.1/0.1
+

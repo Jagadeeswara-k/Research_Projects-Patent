@@ -1,0 +1,10 @@
+Item Number,Item Title,Item Description,Item Quantity,Unit of Measure,Consignee ID,Delivery Period (In number of days)
+1,Title1,ECU Hardware Prototype,1,No,dblnitesh,180
+2,Title2,ECU Automated Test Rig,1,No,dblnitesh,180
+3,Title3,ECU ESS Test rig/production test rig,1,No,dblnitesh,270
+4,Title4,ECU Hardware for QT and clearance ,1,No,dblnitesh,390
+5,Title5,ECU Operational software testing by IV & V and RCMA,1,No,dblnitesh,420
+6,Title6,ECU Load Simulator Test Rig (Test rig for Avionics Integration Rig (AIR) Testing) ,1,No,dblnitesh,420
+7,Title7,ECU flight deliverables ,5,No,dblnitesh,480
+8,Title8,NRE Charges for ECU hardware development,1,Job,dblnitesh,480
+9,Title9,NRE Charges for ECU test rigs development ,1,Job,dblnitesh,480

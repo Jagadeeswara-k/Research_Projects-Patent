@@ -1,0 +1,18 @@
+.NCP51820 :1 ;High Speed Half-Bridge Driver for GaN Power Switches High-Speed 650V 200 V/ns dV/dt
+NCP51820
+*STM IC
+*NGS
+*PLB 1="VDDH" 2="HOSRC" 3="HOSNK" 4="SW" 5="VDDL" 6="LOSRC" 7="LOSNK" 8="PGND" 9="DT" 10="SGND" 11="LIN" 12="HIN" 13="EN" 14="VDD" 15="VBST"
+*MXP 15
+*DFN NCP51820
+~!Manufacturer_Name (onsemi)
+~!Manufacturer_Part_Number (NCP51820)
+~!Mouser Part Number (N/A)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/onsemi/NCP51820?qs=vEM7xhTegWhaPMdkL3AwCA%3D%3D)
+~!Arrow Part Number (-)
+~!Arrow Price/Stock (-)
+~!Link Datasheet (https://www.onsemi.com/download/data-sheet/pdf/ncp51820-d.pdf)
+~!Height (0.9mm)
+~!3D_Model (NCP51820)
+NCP51820
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 

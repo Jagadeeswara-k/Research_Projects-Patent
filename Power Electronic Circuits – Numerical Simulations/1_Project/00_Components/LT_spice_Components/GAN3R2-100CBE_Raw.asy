@@ -1,0 +1,32 @@
+Version 4
+SymbolType CELL
+LINE Normal -16 0 -16 5
+LINE Normal 7 -6 -16 0
+LINE Normal 7 5 -16 0
+LINE Normal 7 -6 7 5
+LINE Normal -16 -6 -16 0
+LINE Normal -16 -21 -16 -11
+LINE Normal 16 -16 -16 -16
+LINE Normal 16 -32 16 -16
+LINE Normal 16 0 7 0
+LINE Normal 16 32 16 0
+LINE Normal -22 32 -22 -21
+LINE Normal -32 32 -22 32
+LINE Normal -16 19 -16 32
+LINE Normal 16 25 -16 25
+TEXT 23 -33 Left 0 S
+TEXT 23 26 Left 0 D
+TEXT -36 22 Left 0 G
+WINDOW 3 24 10 Left 0
+SYMATTR Value GAN3R2-100CBE
+SYMATTR Prefix x
+SYMATTR ModelFile GAN3R2-100CBE_LTspice.lib
+PIN 16 -32 NONE 8
+PINATTR PinName Drain
+PINATTR SpiceOrder 1
+PIN -32 32 NONE 8
+PINATTR PinName Source2
+PINATTR SpiceOrder 2
+PIN 16 32 NONE 8
+PINATTR PinName Gate2
+PINATTR SpiceOrder 3

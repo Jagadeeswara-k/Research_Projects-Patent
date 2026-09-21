@@ -1,0 +1,440 @@
+[
+    {
+        "id": "efb63c06ce902e10",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2211568480846063",
+        "type": "inject",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "3d1607a810c6081e"
+            ]
+        ]
+    },
+    {
+        "id": "3d1607a810c6081e",
+        "type": "http request",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2749650/feeds/last.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 100,
+        "wires": [
+            [
+                "4df42d49c94eecc0"
+            ]
+        ]
+    },
+    {
+        "id": "4df42d49c94eecc0",
+        "type": "json",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 550,
+        "y": 100,
+        "wires": [
+            [
+                "a07d783140bd3455"
+            ]
+        ]
+    },
+    {
+        "id": "a07d783140bd3455",
+        "type": "debug",
+        "z": "efb63c06ce902e10",
+        "name": "Solar",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e6f03445d70ae915",
+        "type": "inject",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "5d70957fdbdc9397"
+            ]
+        ]
+    },
+    {
+        "id": "5d70957fdbdc9397",
+        "type": "http request",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2750845/feeds/last.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 360,
+        "wires": [
+            [
+                "afcd377fcc2416e5"
+            ]
+        ]
+    },
+    {
+        "id": "afcd377fcc2416e5",
+        "type": "json",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 530,
+        "y": 360,
+        "wires": [
+            [
+                "f7e95a347c1ee58c"
+            ]
+        ]
+    },
+    {
+        "id": "f7e95a347c1ee58c",
+        "type": "debug",
+        "z": "efb63c06ce902e10",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "464ba43100bd4fc9",
+        "type": "inject",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "fe3e67fc266671b7"
+            ]
+        ]
+    },
+    {
+        "id": "fe3e67fc266671b7",
+        "type": "http request",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2750723/feeds/last.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 360,
+        "wires": [
+            [
+                "10fba17b3ff53bdf"
+            ]
+        ]
+    },
+    {
+        "id": "10fba17b3ff53bdf",
+        "type": "json",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 530,
+        "y": 360,
+        "wires": [
+            [
+                "f1fbd8be94b1a656"
+            ]
+        ]
+    },
+    {
+        "id": "f1fbd8be94b1a656",
+        "type": "debug",
+        "z": "efb63c06ce902e10",
+        "name": "PCC_-- Swapping",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ea75c81259e1a6bf",
+        "type": "inject",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "1dc42acf5fdc3504"
+            ]
+        ]
+    },
+    {
+        "id": "1dc42acf5fdc3504",
+        "type": "http request",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2749674/feeds/last.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 240,
+        "wires": [
+            [
+                "31246ca4839ac7a2"
+            ]
+        ]
+    },
+    {
+        "id": "31246ca4839ac7a2",
+        "type": "json",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 550,
+        "y": 240,
+        "wires": [
+            [
+                "37229b483830350d"
+            ]
+        ]
+    },
+    {
+        "id": "37229b483830350d",
+        "type": "debug",
+        "z": "efb63c06ce902e10",
+        "name": "ESS_Monitoring -- Grid",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "98e1b9929f778bbe",
+        "type": "inject",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "b03242f8d9de9b03"
+            ]
+        ]
+    },
+    {
+        "id": "b03242f8d9de9b03",
+        "type": "http request",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2750845/feeds/last.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 480,
+        "wires": [
+            [
+                "e735ebb30a5fbc94"
+            ]
+        ]
+    },
+    {
+        "id": "e735ebb30a5fbc94",
+        "type": "json",
+        "z": "efb63c06ce902e10",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 550,
+        "y": 480,
+        "wires": [
+            [
+                "7a08624daff4040f"
+            ]
+        ]
+    },
+    {
+        "id": "7a08624daff4040f",
+        "type": "debug",
+        "z": "efb63c06ce902e10",
+        "name": "Fast Charging",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 480,
+        "wires": []
+    }
+]

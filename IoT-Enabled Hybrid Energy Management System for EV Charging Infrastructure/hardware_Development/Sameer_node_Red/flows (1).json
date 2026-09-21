@@ -1,0 +1,43 @@
+[
+    {
+        "id": "a033b136ac98abcf",
+        "type": "function",
+        "z": "4a6053f46f7c8271",
+        "name": "function 12",
+        "func": "let data = msg.payload;\n\n// Function to reduce >100 values repeatedly and round to 2 decimals\nfunction processValue(val) {\n    let num = parseFloat(val);\n    while (num > 100) {\n        num = num / 10;\n    }\n    return parseFloat(num.toFixed(2));\n}\n\n// Create the new output object\nlet processedData = {\n    field1: processValue(data.field1),\n    field2: processValue(data.field2),\n    field3: processValue(data.field3),\n    field4: processValue(data.field4),\n    field5: processValue(data.field5),\n    field6: processValue(data.field6),\n    field7: processValue(data.field7),\n    field8: processValue(data.field8)\n};\n\nmsg.payload = processedData;\nreturn msg;\n",
+        "outputs": 8,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 1320,
+        "wires": [
+            [
+                "94b7b1d85f710d82"
+            ],
+            [
+                "27617a39c9f92470"
+            ],
+            [
+                "2ae9de0d4b3e22ad"
+            ],
+            [
+                "63f5cb87fc4c1150"
+            ],
+            [
+                "300e183e69f73546"
+            ],
+            [
+                "497afdc54482554a"
+            ],
+            [
+                "6bdf181b2a0d04de"
+            ],
+            [
+                "bc6d9a872bb8f5f7"
+            ]
+        ]
+    }
+]

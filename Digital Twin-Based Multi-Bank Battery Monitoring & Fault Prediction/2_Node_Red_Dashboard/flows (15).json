@@ -1,0 +1,352 @@
+[
+    {
+        "id": "1d9a2763b7f936ff",
+        "type": "tab",
+        "label": "Flow 5",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0253d634e4593a53",
+        "type": "inject",
+        "z": "1d9a2763b7f936ff",
+        "name": "timestamp CH1",
+        "repeat": "15",
+        "once": true,
+        "onceDelay": "1",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1000,
+        "y": 100,
+        "wires": [
+            [
+                "ae326474d8ce287d"
+            ]
+        ]
+    },
+    {
+        "id": "34f1a3e24496a050",
+        "type": "inject",
+        "z": "1d9a2763b7f936ff",
+        "name": "timestamp CH2",
+        "repeat": "15",
+        "once": true,
+        "onceDelay": "3",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1000,
+        "y": 200,
+        "wires": [
+            [
+                "e2be9550a79bb5f4"
+            ]
+        ]
+    },
+    {
+        "id": "2c4151153218d097",
+        "type": "inject",
+        "z": "1d9a2763b7f936ff",
+        "name": "timestamp CH3",
+        "repeat": "15",
+        "once": true,
+        "onceDelay": "5",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1000,
+        "y": 300,
+        "wires": [
+            [
+                "400a0ca1f49d3f49"
+            ]
+        ]
+    },
+    {
+        "id": "cf894559a696cc9b",
+        "type": "inject",
+        "z": "1d9a2763b7f936ff",
+        "name": "timestamp CH4",
+        "repeat": "15",
+        "once": true,
+        "onceDelay": "7",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1000,
+        "y": 400,
+        "wires": [
+            [
+                "938b8778007bd24b"
+            ]
+        ]
+    },
+    {
+        "id": "ae326474d8ce287d",
+        "type": "http request",
+        "z": "1d9a2763b7f936ff",
+        "name": "ThingSpeak CH1",
+        "method": "GET",
+        "ret": "txt",
+        "url": "https://api.thingspeak.com/channels/3301782/feeds.json?api_key=JKLKCO8AK0MRW4CW&results=1",
+        "x": 1200,
+        "y": 100,
+        "wires": [
+            [
+                "53aa2271bde0b24d"
+            ]
+        ]
+    },
+    {
+        "id": "e2be9550a79bb5f4",
+        "type": "http request",
+        "z": "1d9a2763b7f936ff",
+        "name": "ThingSpeak CH2",
+        "method": "GET",
+        "ret": "txt",
+        "url": "https://api.thingspeak.com/channels/3301835/feeds.json?api_key=E7OOJBGDEHIK4XA5&results=1",
+        "x": 1200,
+        "y": 200,
+        "wires": [
+            [
+                "dc7bd32f349d1f07"
+            ]
+        ]
+    },
+    {
+        "id": "400a0ca1f49d3f49",
+        "type": "http request",
+        "z": "1d9a2763b7f936ff",
+        "name": "ThingSpeak CH3",
+        "method": "GET",
+        "ret": "txt",
+        "url": "https://api.thingspeak.com/channels/3301844/feeds.json?api_key=GAFKA45LYKNR0V7R&results=1",
+        "x": 1200,
+        "y": 300,
+        "wires": [
+            [
+                "f3e4108e10482623"
+            ]
+        ]
+    },
+    {
+        "id": "938b8778007bd24b",
+        "type": "http request",
+        "z": "1d9a2763b7f936ff",
+        "name": "ThingSpeak CH4",
+        "method": "GET",
+        "ret": "txt",
+        "url": "https://api.thingspeak.com/channels/3301854/feeds.json?api_key=S4690KBYUG75SLYN&results=1",
+        "x": 1200,
+        "y": 400,
+        "wires": [
+            [
+                "08bad98f7b142bc0"
+            ]
+        ]
+    },
+    {
+        "id": "53aa2271bde0b24d",
+        "type": "json",
+        "z": "1d9a2763b7f936ff",
+        "name": "json",
+        "property": "payload",
+        "action": "obj",
+        "x": 1390,
+        "y": 100,
+        "wires": [
+            [
+                "caafd0d09ec3289b"
+            ]
+        ]
+    },
+    {
+        "id": "dc7bd32f349d1f07",
+        "type": "json",
+        "z": "1d9a2763b7f936ff",
+        "name": "json",
+        "property": "payload",
+        "action": "obj",
+        "x": 1390,
+        "y": 200,
+        "wires": [
+            [
+                "cbd51e92341cf529"
+            ]
+        ]
+    },
+    {
+        "id": "f3e4108e10482623",
+        "type": "json",
+        "z": "1d9a2763b7f936ff",
+        "name": "json",
+        "property": "payload",
+        "action": "obj",
+        "x": 1390,
+        "y": 300,
+        "wires": [
+            [
+                "748c3b2e17368fea"
+            ]
+        ]
+    },
+    {
+        "id": "08bad98f7b142bc0",
+        "type": "json",
+        "z": "1d9a2763b7f936ff",
+        "name": "json",
+        "property": "payload",
+        "action": "obj",
+        "x": 1390,
+        "y": 400,
+        "wires": [
+            [
+                "677ed308594d9782"
+            ]
+        ]
+    },
+    {
+        "id": "caafd0d09ec3289b",
+        "type": "function",
+        "z": "1d9a2763b7f936ff",
+        "name": "function 24",
+        "func": "var feeds = (msg.payload.feeds && msg.payload.feeds.length > 0) ? msg.payload.feeds[msg.payload.feeds.length - 1] : null;\nif (!feeds) { msg.payload = { V_sim:'NO DATA',I_sim:'NO DATA',SOC_sim:'NO DATA',SOH_sim:'NO DATA',T_sim:'NO DATA',RUL_sim:'NO DATA',health_index_sim:'NO DATA',V_hw:'NO DATA' }; }\nelse { msg.payload = { V_sim:feeds.field1||'NO DATA', I_sim:feeds.field2||'NO DATA', SOC_sim:feeds.field3||'NO DATA', SOH_sim:feeds.field4||'NO DATA', T_sim:feeds.field5||'NO DATA', RUL_sim:feeds.field6||'NO DATA', health_index_sim:feeds.field7||'NO DATA', V_hw:feeds.field8||'NO DATA' }; }\nmsg.topic = 'channel1'; return msg;",
+        "outputs": 1,
+        "x": 1570,
+        "y": 100,
+        "wires": [
+            [
+                "d428f75441a8ec9e"
+            ]
+        ]
+    },
+    {
+        "id": "cbd51e92341cf529",
+        "type": "function",
+        "z": "1d9a2763b7f936ff",
+        "name": "function 25",
+        "func": "var feeds = (msg.payload.feeds && msg.payload.feeds.length > 0) ? msg.payload.feeds[msg.payload.feeds.length - 1] : null;\nif (!feeds) { msg.payload = { I_hw:'NO DATA',SOC_hw:'NO DATA',SOH_hw:'NO DATA',T_hw:'NO DATA',RUL_hw:'NO DATA',health_idx_hw:'NO DATA',V_diff:'NO DATA',I_diff:'NO DATA' }; }\nelse { msg.payload = { I_hw:feeds.field1||'NO DATA', SOC_hw:feeds.field2||'NO DATA', SOH_hw:feeds.field3||'NO DATA', T_hw:feeds.field4||'NO DATA', RUL_hw:feeds.field5||'NO DATA', health_idx_hw:feeds.field6||'NO DATA', V_diff:feeds.field7||'NO DATA', I_diff:feeds.field8||'NO DATA' }; }\nmsg.topic = 'channel2'; return msg;",
+        "outputs": 1,
+        "x": 1570,
+        "y": 200,
+        "wires": [
+            [
+                "d428f75441a8ec9e"
+            ]
+        ]
+    },
+    {
+        "id": "748c3b2e17368fea",
+        "type": "function",
+        "z": "1d9a2763b7f936ff",
+        "name": "function 26",
+        "func": "var feeds = (msg.payload.feeds && msg.payload.feeds.length > 0) ? msg.payload.feeds[msg.payload.feeds.length - 1] : null;\nif (!feeds) { msg.payload = { SOC_diff:'NO DATA',SOH_diff:'NO DATA',T_diff:'NO DATA',RUL_diff:'NO DATA',health_diff:'NO DATA',RMSE_V:'NO DATA',RMSE_I:'NO DATA',RMSE_SOC:'NO DATA' }; }\nelse { msg.payload = { SOC_diff:feeds.field1||'NO DATA', SOH_diff:feeds.field2||'NO DATA', T_diff:feeds.field3||'NO DATA', RUL_diff:feeds.field4||'NO DATA', health_diff:feeds.field5||'NO DATA', RMSE_V:feeds.field6||'NO DATA', RMSE_I:feeds.field7||'NO DATA', RMSE_SOC:feeds.field8||'NO DATA' }; }\nmsg.topic = 'channel3'; return msg;",
+        "outputs": 1,
+        "x": 1570,
+        "y": 300,
+        "wires": [
+            [
+                "d428f75441a8ec9e"
+            ]
+        ]
+    },
+    {
+        "id": "677ed308594d9782",
+        "type": "function",
+        "z": "1d9a2763b7f936ff",
+        "name": "function 28",
+        "func": "var feeds = (msg.payload.feeds && msg.payload.feeds.length > 0) ? msg.payload.feeds[msg.payload.feeds.length - 1] : null;\nif (!feeds) { msg.payload = { RMSE_SOH:'NO DATA',imb_sim:'NO DATA',imb_hw:'NO DATA',chg_eff:'NO DATA',coul_eff:'NO DATA',algo_sim:'NO DATA',algo_hw:'NO DATA',stress_sim:'NO DATA' }; }\nelse { msg.payload = { RMSE_SOH:feeds.field1||'NO DATA', imb_sim:feeds.field2||'NO DATA', imb_hw:feeds.field3||'NO DATA', chg_eff:feeds.field4||'NO DATA', coul_eff:feeds.field5||'NO DATA', algo_sim:feeds.field6||'NO DATA', algo_hw:feeds.field7||'NO DATA', stress_sim:feeds.field8||'NO DATA' }; }\nmsg.topic = 'channel4'; return msg;",
+        "outputs": 1,
+        "x": 1570,
+        "y": 400,
+        "wires": [
+            [
+                "d428f75441a8ec9e"
+            ]
+        ]
+    },
+    {
+        "id": "d428f75441a8ec9e",
+        "type": "join",
+        "z": "1d9a2763b7f936ff",
+        "name": "join 4+",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "count": "4",
+        "reduceRight": false,
+        "x": 1790,
+        "y": 240,
+        "wires": [
+            [
+                "045d12b5a9c4042d"
+            ]
+        ]
+    },
+    {
+        "id": "045d12b5a9c4042d",
+        "type": "function",
+        "z": "1d9a2763b7f936ff",
+        "name": "function 27",
+        "func": "var c1=msg.payload.channel1||{}, c2=msg.payload.channel2||{}, c3=msg.payload.channel3||{}, c4=msg.payload.channel4||{};\nmsg.payload = {\n  ch1:{ V_sim:c1.V_sim||'NO DATA', I_sim:c1.I_sim||'NO DATA', SOC_sim:c1.SOC_sim||'NO DATA', SOH_sim:c1.SOH_sim||'NO DATA', T_sim:c1.T_sim||'NO DATA', RUL_sim:c1.RUL_sim||'NO DATA', health_index_sim:c1.health_index_sim||'NO DATA', V_hw:c1.V_hw||'NO DATA' },\n  ch2:{ I_hw:c2.I_hw||'NO DATA', SOC_hw:c2.SOC_hw||'NO DATA', SOH_hw:c2.SOH_hw||'NO DATA', T_hw:c2.T_hw||'NO DATA', RUL_hw:c2.RUL_hw||'NO DATA', health_idx_hw:c2.health_idx_hw||'NO DATA', V_diff:c2.V_diff||'NO DATA', I_diff:c2.I_diff||'NO DATA' },\n  ch3:{ SOC_diff:c3.SOC_diff||'NO DATA', SOH_diff:c3.SOH_diff||'NO DATA', T_diff:c3.T_diff||'NO DATA', RUL_diff:c3.RUL_diff||'NO DATA', health_diff:c3.health_diff||'NO DATA', RMSE_V:c3.RMSE_V||'NO DATA', RMSE_I:c3.RMSE_I||'NO DATA', RMSE_SOC:c3.RMSE_SOC||'NO DATA' },\n  ch4:{ RMSE_SOH:c4.RMSE_SOH||'NO DATA', imb_sim:c4.imb_sim||'NO DATA', imb_hw:c4.imb_hw||'NO DATA', chg_eff:c4.chg_eff||'NO DATA', coul_eff:c4.coul_eff||'NO DATA', algo_sim:c4.algo_sim||'NO DATA', algo_hw:c4.algo_hw||'NO DATA', stress_sim:c4.stress_sim||'NO DATA' },\n  timestamp: new Date().toLocaleString()\n};\nreturn msg;",
+        "outputs": 1,
+        "x": 1980,
+        "y": 240,
+        "wires": [
+            [
+                "488bab65637ea32a",
+                "22f2b17932e8645c"
+            ]
+        ]
+    },
+    {
+        "id": "488bab65637ea32a",
+        "type": "ui_template",
+        "z": "1d9a2763b7f936ff",
+        "group": "grp_bms",
+        "name": "Digital Twin BMS Dashboard",
+        "width": "",
+        "height": "",
+        "format": "<style>\nmd-card, .nr-dashboard-template {\n    padding: 0 !important;\n    margin: 0 !important;\n    box-shadow: none !important;\n    background: transparent !important;\n}\n\n#bms-root * { margin: 0; padding: 0; box-sizing: border-box; }\n\n#bms-root {\n    position: fixed;\n    top: 0; left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 9999;\n    display: flex;\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    background: #f0f2f5;\n    overflow: hidden;\n}\n\n/* ══════════════════════\n   SIDEBAR\n══════════════════════ */\n#bms-sidebar {\n    width: 240px;\n    min-width: 240px;\n    background: #1e2a3a;\n    display: flex;\n    flex-direction: column;\n    height: 100vh;\n    overflow-y: auto;\n    overflow-x: hidden;\n    flex-shrink: 0;\n}\n#bms-sidebar::-webkit-scrollbar { width: 4px; }\n#bms-sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 4px; }\n\n.sb-logo {\n    display: flex; align-items: center; gap: 12px;\n    padding: 20px 18px 16px;\n    border-bottom: 1px solid rgba(255,255,255,0.07);\n    flex-shrink: 0;\n}\n.sb-logo-img {\n    width: 44px; height: 44px; border-radius: 9px;\n    background: #fff; display: flex; align-items: center; justify-content: center;\n    overflow: hidden; flex-shrink: 0;\n    box-shadow: 0 2px 8px rgba(0,0,0,0.35);\n}\n.sb-logo-img img { width: 86%; height: 86%; object-fit: contain; }\n.sb-brand-title { font-size: 14px; font-weight: 700; color: #fff; line-height: 1.2; }\n.sb-brand-sub   { font-size: 9.5px; color: rgba(255,255,255,0.4); margin-top: 2px; }\n\n.sb-section-lbl {\n    font-size: 8.5px; font-weight: 700; letter-spacing: 1.8px;\n    color: rgba(255,255,255,0.28); padding: 14px 20px 5px; text-transform: uppercase;\n}\n.sb-nav { list-style: none; padding: 4px 0; flex-shrink: 0; }\n.sb-nav-item { margin: 2px 8px; border-radius: 9px; overflow: hidden; cursor: pointer; }\n.sb-nav-link {\n    display: flex; align-items: center; gap: 11px;\n    padding: 11px 13px;\n    color: rgba(255,255,255,0.62); font-size: 13px; font-weight: 500;\n    transition: background 0.2s, color 0.2s; border-radius: 9px; user-select: none;\n}\n.sb-nav-link:hover { background: rgba(255,255,255,0.07); color: #fff; }\n.sb-nav-item.active > .sb-nav-link {\n    background: #1565ff; color: #fff; font-weight: 600;\n    box-shadow: 0 3px 10px rgba(21,101,255,0.45);\n}\n.sb-icon { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }\n.sb-footer {\n    margin-top: auto; padding: 13px 18px;\n    border-top: 1px solid rgba(255,255,255,0.07);\n    font-size: 9.5px; color: rgba(255,255,255,0.22); line-height: 1.9; flex-shrink: 0;\n}\n\n/* ══════════════════════\n   MAIN AREA\n══════════════════════ */\n#bms-main {\n    flex: 1; display: flex; flex-direction: column;\n    height: 100vh; overflow: hidden; min-width: 0;\n}\n\n#bms-topbar {\n    background: #fff; border-bottom: 1px solid #e2e8f0;\n    padding: 15px 28px; display: flex; justify-content: space-between;\n    align-items: center; flex-shrink: 0;\n    box-shadow: 0 1px 6px rgba(0,0,0,0.06);\n}\n.tb-title {\n    font-size: 20px; font-weight: 700; color: #1565ff;\n    position: relative; display: inline-block;\n}\n.tb-title::after {\n    content: ''; position: absolute; bottom: -5px; left: 0;\n    width: 36px; height: 3px; background: #1565ff; border-radius: 2px;\n}\n.tb-right { display: flex; align-items: center; gap: 14px; }\n.tb-time { font-size: 11.5px; color: #94a3b8; display: flex; align-items: center; gap: 6px; }\n.live-pill {\n    display: flex; align-items: center; gap: 6px;\n    background: #dcfce7; color: #16a34a;\n    font-size: 10.5px; font-weight: 700; padding: 4px 12px;\n    border-radius: 20px; letter-spacing: 0.5px;\n}\n.live-dot {\n    width: 6px; height: 6px; border-radius: 50%;\n    background: #16a34a; animation: liveBlink 1.8s ease-in-out infinite;\n}\n@keyframes liveBlink { 0%,100%{opacity:1} 50%{opacity:0.2} }\n\n/* ══════════════════════\n   CONTENT AREA\n══════════════════════ */\n#bms-content {\n    flex: 1; overflow-y: auto; overflow-x: hidden;\n    background: #f0f2f5;\n    /* NO padding here — each page controls its own padding */\n}\n#bms-content::-webkit-scrollbar { width: 5px; }\n#bms-content::-webkit-scrollbar-track { background: #f0f2f5; }\n#bms-content::-webkit-scrollbar-thumb { background: #c8d0db; border-radius: 4px; }\n\n/* ══════════════════════\n   PAGE ANIMATION\n══════════════════════ */\n@keyframes pageIn {\n    from { opacity: 0; transform: translateY(14px); }\n    to   { opacity: 1; transform: translateY(0); }\n}\n\n/* ══════════════════════\n   HOME PAGE — fills full viewport height\n══════════════════════ */\n.home-page {\n    animation: pageIn 0.4s ease both;\n    width: 100%;\n    height: calc(100vh - 56px);\n    display: flex;\n    flex-direction: column;\n    background: #fff;\n    position: relative;\n    overflow: hidden;\n}\n\n/* top colour bar */\n.home-page::before {\n    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;\n    background: linear-gradient(90deg, #1565ff, #0891b2, #16a34a);\n    z-index: 1;\n}\n\n.home-card {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    padding: 48px 60px;\n    text-align: center;\n    width: 100%;\n    background: #fff;\n}\n.home-logo-wrap {\n    width: 130px; height: 130px; border-radius: 22px;\n    background: #fff; border: 2px solid #e2e8f0;\n    box-shadow: 0 6px 22px rgba(0,0,0,0.12);\n    margin: 0 auto 30px; overflow: hidden;\n    display: flex; align-items: center; justify-content: center;\n}\n.home-logo-wrap img { width: 82%; height: 82%; object-fit: contain; }\n.home-title {\n    font-size: 42px; font-weight: 800; color: #1565ff;\n    margin-bottom: 16px; letter-spacing: -0.8px;\n}\n.home-tagline {\n    font-size: 17px; color: #475569; line-height: 1.85;\n    margin-bottom: 52px; max-width: 620px;\n    margin-left: auto; margin-right: auto;\n}\n.home-stats {\n    display: grid; grid-template-columns: repeat(4, 1fr);\n    gap: 24px; width: 100%; max-width: 1100px;\n}\n.hstat {\n    background: #f8fafc; border: 1px solid #e9edf2;\n    border-radius: 18px; padding: 36px 20px;\n    transition: transform 0.22s, box-shadow 0.22s;\n}\n.hstat:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.11); }\n.hstat-icon {\n    width: 68px; height: 68px; border-radius: 50%;\n    display: flex; align-items: center; justify-content: center;\n    font-size: 26px; color: #fff; margin: 0 auto 16px;\n}\n.hstat-value { font-size: 34px; font-weight: 700; color: #1e293b; }\n.hstat-label { font-size: 12px; color: #94a3b8; font-weight: 500; margin-top: 6px; letter-spacing: 0.3px; }\n\n/* ══════════════════════\n   CHANNEL PAGES — full width grid from top\n══════════════════════ */\n.ch-page {\n    animation: pageIn 0.4s ease both;\n    padding: 28px 28px 32px;\n}\n\n.pg-hdr {\n    display: flex; align-items: center; gap: 14px;\n    margin-bottom: 22px; padding-bottom: 16px;\n    border-bottom: 1px solid #e2e8f0;\n}\n.pg-hdr-icon {\n    width: 48px; height: 48px; border-radius: 11px;\n    display: flex; align-items: center; justify-content: center;\n    font-size: 20px; color: #fff; flex-shrink: 0;\n}\n.pg-hdr-title { font-size: 16px; font-weight: 700; color: #1e293b; }\n.pg-hdr-sub   { font-size: 10.5px; color: #94a3b8; margin-top: 2px; }\n\n.sec-hdr {\n    display: flex; align-items: center; gap: 10px;\n    font-size: 14.5px; font-weight: 600; color: #1e293b;\n    margin-bottom: 18px;\n}\n.sec-hdr i { color: #1565ff; }\n\n/* THE KEY: auto-fill grid that always fills the row */\n.data-grid {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    gap: 18px;\n    width: 100%;\n}\n\n.data-card {\n    background: #fff;\n    border-radius: 13px;\n    box-shadow: 0 2px 10px rgba(0,0,0,0.07);\n    padding: 22px 20px 18px;\n    transition: transform 0.22s, box-shadow 0.22s;\n    border: 1px solid transparent;\n    display: flex; flex-direction: column;\n    min-width: 0;\n    animation: pageIn 0.4s ease both;\n}\n.data-card:hover {\n    transform: translateY(-5px);\n    box-shadow: 0 10px 28px rgba(0,0,0,0.13);\n    border-color: #e2e8f0;\n}\n.data-card:nth-child(1){animation-delay:.04s}\n.data-card:nth-child(2){animation-delay:.08s}\n.data-card:nth-child(3){animation-delay:.12s}\n.data-card:nth-child(4){animation-delay:.16s}\n.data-card:nth-child(5){animation-delay:.20s}\n.data-card:nth-child(6){animation-delay:.24s}\n.data-card:nth-child(7){animation-delay:.28s}\n.data-card:nth-child(8){animation-delay:.32s}\n\n.dc-header {\n    display: flex; justify-content: space-between;\n    align-items: center; margin-bottom: 16px;\n}\n.dc-title { font-size: 13px; font-weight: 500; color: #64748b; }\n.dc-icon {\n    width: 44px; height: 44px; border-radius: 10px;\n    display: flex; align-items: center; justify-content: center;\n    font-size: 18px; color: #fff; flex-shrink: 0;\n}\n.dc-value {\n    font-size: 30px; font-weight: 700; color: #1e293b;\n    line-height: 1.1; margin-bottom: 4px;\n}\n.dc-unit { font-size: 12px; color: #94a3b8; margin-top: 2px; }\n.dc-bar-wrap { margin-top: auto; padding-top: 14px; }\n.dc-bar-track {\n    width: 100%; height: 4px;\n    background: #edf1f7; border-radius: 4px; overflow: hidden;\n}\n.dc-bar {\n    height: 100%; border-radius: 4px;\n    transition: width 1.1s cubic-bezier(0.4,0,0.2,1); min-width: 3px;\n}\n\n/* ══════════════════════\n   ARCHITECTURE FLOWCHART\n══════════════════════ */\n.arch-section {\n    margin-top: 28px;\n    background: #fff;\n    border-radius: 14px;\n    box-shadow: 0 2px 12px rgba(0,0,0,0.08);\n    padding: 28px 24px 24px;\n    border-top: 4px solid #1565ff;\n}\n\n.arch-title {\n    font-size: 15px; font-weight: 700; color: #1e293b;\n    text-align: center; margin-bottom: 22px;\n    display: flex; align-items: center; justify-content: center; gap: 8px;\n}\n\n.arch-title i { color: #1565ff; font-size: 16px; }\n\n/* Two branch columns */\n.arch-branches {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 20px;\n    margin-bottom: 20px;\n}\n\n.arch-branch {\n    border-radius: 12px;\n    padding: 18px 16px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n.arch-branch.sim-branch { background: #f0fdf4; border: 1.5px solid #bbf7d0; }\n.arch-branch.hw-branch  { background: #fff7ed; border: 1.5px solid #fed7aa; }\n\n.arch-branch-title {\n    font-size: 12px; font-weight: 700; margin-bottom: 14px;\n    display: flex; align-items: center; gap: 7px;\n}\n\n.arch-block {\n    background: #fff;\n    border: 1.5px solid #e2e8f0;\n    border-radius: 8px;\n    padding: 9px 14px;\n    width: 100%;\n    text-align: center;\n    font-size: 11.5px;\n    font-weight: 500;\n    color: #1e293b;\n    box-shadow: 0 1px 4px rgba(0,0,0,0.07);\n    line-height: 1.4;\n}\n\n.arch-block.highlighted {\n    border-color: #1565ff;\n    background: #eff6ff;\n    color: #1565ff;\n    font-weight: 600;\n}\n\n.arch-block.hw-highlighted {\n    border-color: #ea580c;\n    background: #fff7ed;\n    color: #ea580c;\n    font-weight: 600;\n}\n\n.arch-arrow {\n    width: 2px; height: 14px;\n    background: #cbd5e1;\n    margin: 3px auto;\n    position: relative;\n}\n\n.arch-arrow::after {\n    content: '';\n    position: absolute;\n    bottom: -4px; left: 50%;\n    transform: translateX(-50%);\n    width: 0; height: 0;\n    border-left: 4px solid transparent;\n    border-right: 4px solid transparent;\n    border-top: 5px solid #cbd5e1;\n}\n\n/* Merge row */\n.arch-merge {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 12px;\n    margin-bottom: 20px;\n}\n\n.arch-merge-line {\n    flex: 1; height: 2px; background: #cbd5e1; max-width: 80px;\n}\n\n.arch-compare-box {\n    background: #fef9c3;\n    border: 2px solid #f59e0b;\n    border-radius: 10px;\n    padding: 14px 22px;\n    text-align: center;\n    font-size: 12.5px;\n    font-weight: 700;\n    color: #92400e;\n    box-shadow: 0 2px 8px rgba(245,158,11,0.2);\n}\n\n.arch-compare-box span {\n    display: block;\n    font-size: 10.5px;\n    font-weight: 500;\n    color: #78350f;\n    margin-top: 3px;\n}\n\n/* Output row */\n.arch-outputs {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 14px;\n    margin-bottom: 16px;\n}\n\n.arch-output {\n    background: #f5f3ff;\n    border: 1.5px solid #ddd6fe;\n    border-radius: 10px;\n    padding: 14px 10px;\n    text-align: center;\n    font-size: 12px;\n    font-weight: 700;\n    color: #5b21b6;\n    transition: transform 0.2s, box-shadow 0.2s;\n}\n\n.arch-output:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(91,33,182,0.12); }\n\n.arch-output span {\n    display: block;\n    font-size: 10px;\n    font-weight: 500;\n    color: #7c3aed;\n    margin-top: 4px;\n}\n\n.arch-footer {\n    text-align: center;\n    font-size: 10.5px;\n    color: #94a3b8;\n    border-top: 1px solid #f1f5f9;\n    padding-top: 12px;\n    line-height: 1.7;\n}\n\n/* ══════════════════════\n   FLOWCHART STYLES\n══════════════════════ */\n.fc-wrap {\n    background: #fff;\n    border-radius: 13px;\n    box-shadow: 0 2px 10px rgba(0,0,0,0.07);\n    padding: 24px 20px 20px;\n    margin-bottom: 24px;\n    overflow-x: auto;\n}\n.fc-title {\n    text-align: center;\n    font-size: 15px; font-weight: 700; color: #1e293b;\n    margin-bottom: 20px;\n}\n.fc-branches {\n    display: flex;\n    justify-content: center;\n    gap: 28px;\n    margin-bottom: 0;\n}\n.fc-branch {\n    display: flex; flex-direction: column; align-items: center;\n    border-radius: 10px; padding: 14px 12px 10px;\n    min-width: 210px; flex: 1; max-width: 260px;\n}\n.fc-branch.sim { background: #f0fdf4; border: 1.5px solid #bbf7d0; }\n.fc-branch.hw  { background: #fff7ed; border: 1.5px solid #fed7aa; }\n.fc-branch-title {\n    font-size: 12px; font-weight: 700; margin-bottom: 10px;\n    display: flex; align-items: center; gap: 6px;\n}\n.fc-block {\n    background: #fff;\n    border: 1.5px solid #cbd5e1;\n    border-radius: 7px;\n    padding: 7px 10px;\n    width: 100%;\n    text-align: center;\n    font-size: 11px;\n    color: #1e293b;\n    box-shadow: 0 1px 4px rgba(0,0,0,0.07);\n    line-height: 1.4;\n}\n.fc-arrow {\n    width: 2px; height: 14px;\n    background: #94a3b8;\n    margin: 3px auto;\n    flex-shrink: 0;\n}\n.fc-arrow-h {\n    width: 30px; height: 2px;\n    background: #94a3b8;\n    flex-shrink: 0;\n    position: relative;\n}\n.fc-arrow-h::after {\n    content: '';\n    position: absolute; right: -5px; top: -4px;\n    border-left: 6px solid #94a3b8;\n    border-top: 4px solid transparent;\n    border-bottom: 4px solid transparent;\n}\n.fc-merge {\n    display: flex; align-items: center; justify-content: center;\n    gap: 12px; margin: 16px 0 12px;\n}\n.fc-compare {\n    background: #fffbeb;\n    border: 2px solid #f59e0b;\n    border-radius: 10px;\n    padding: 12px 24px;\n    text-align: center;\n    font-size: 13px; font-weight: 700; color: #92400e;\n    line-height: 1.55;\n}\n.fc-compare span { font-size: 10.5px; font-weight: 400; color: #78350f; }\n.fc-outputs {\n    display: flex; justify-content: center; gap: 16px;\n    flex-wrap: wrap; margin-top: 10px;\n}\n.fc-out {\n    border-radius: 9px;\n    padding: 10px 18px;\n    text-align: center;\n    font-size: 11.5px; font-weight: 700;\n    min-width: 130px; line-height: 1.5;\n}\n.fc-out span { font-size: 10px; font-weight: 400; display: block; margin-top: 2px; }\n.fc-out-1 { background: #ede9fe; color: #5b21b6; }\n.fc-out-2 { background: #dbeafe; color: #1e40af; }\n.fc-out-3 { background: #dcfce7; color: #166534; }\n.fc-footer {\n    text-align: center; font-size: 10px; color: #94a3b8;\n    margin-top: 14px; line-height: 1.7;\n}\n\n/* icon gradient helpers */\n.ic-b  { background: linear-gradient(135deg,#1565ff,#3b82f6); }\n\n/* ══════════════════════\n   ALGORITHMS PAGE\n══════════════════════ */\n.algo-page {\n    animation: pageIn 0.4s ease both;\n    padding: 28px 28px 32px;\n}\n\n/* ── Two-column layout ── */\n.col-title {\n    font-size: 11px; font-weight: 700; letter-spacing: 1.6px;\n    text-transform: uppercase; color: #94a3b8;\n    margin-bottom: 14px; padding-left: 2px;\n}\n\n/* Novel algorithms — 5 column grid */\n.novel-grid-row {\n    display: grid;\n    grid-template-columns: repeat(5, 1fr);\n    gap: 14px;\n    width: 100%;\n}\n\n.novel-card {\n    background: #fff;\n    border-radius: 12px;\n    box-shadow: 0 2px 10px rgba(0,0,0,0.07);\n    padding: 18px 18px 16px;\n    margin-bottom: 12px;\n    border-left: 4px solid transparent;\n    transition: transform 0.2s, box-shadow 0.2s;\n    animation: pageIn 0.4s ease both;\n}\n.novel-card:hover { transform: translateX(5px); box-shadow: 0 8px 24px rgba(0,0,0,0.11); }\n.novel-card:last-child { margin-bottom: 0; }\n\n.novel-card:nth-child(1){border-left-color:#1565ff;animation-delay:.05s}\n.novel-card:nth-child(2){border-left-color:#16a34a;animation-delay:.10s}\n.novel-card:nth-child(3){border-left-color:#ea580c;animation-delay:.15s}\n.novel-card:nth-child(4){border-left-color:#7c3aed;animation-delay:.20s}\n.novel-card:nth-child(5){border-left-color:#0891b2;animation-delay:.25s}\n\n.novel-head { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }\n\n.novel-icon {\n    width: 34px; height: 34px; border-radius: 8px;\n    display: flex; align-items: center; justify-content: center;\n    font-size: 14px; color: #fff; flex-shrink: 0;\n}\n\n.novel-name { font-size: 13px; font-weight: 700; color: #1e293b; line-height: 1.3; }\n.novel-tag  {\n    display: inline-block; font-size: 9px; font-weight: 700;\n    padding: 2px 8px; border-radius: 20px; margin-top: 3px;\n    letter-spacing: 0.4px;\n}\n.tag-b { background:#eff6ff; color:#1565ff; }\n.tag-g { background:#f0fdf4; color:#16a34a; }\n.tag-o { background:#fff7ed; color:#ea580c; }\n.tag-p { background:#f5f3ff; color:#7c3aed; }\n.tag-t { background:#ecfeff; color:#0891b2; }\n\n.novel-desc { font-size: 11.5px; color: #64748b; line-height: 1.65; }\n.ic-g  { background: linear-gradient(135deg,#16a34a,#22c55e); }\n.ic-o  { background: linear-gradient(135deg,#ea580c,#f97316); }\n.ic-r  { background: linear-gradient(135deg,#dc2626,#ef4444); }\n.ic-t  { background: linear-gradient(135deg,#0891b2,#06b6d4); }\n.ic-p  { background: linear-gradient(135deg,#7c3aed,#a855f7); }\n.ic-y  { background: linear-gradient(135deg,#d97706,#f59e0b); }\n.ic-pk { background: linear-gradient(135deg,#db2777,#ec4899); }\n</style>\n\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\">\n\n<div id=\"bms-root\" ng-init=\"sp='home'; msg=msg||{payload:{ch1:{},ch2:{},ch3:{},ch4:{}}};\"> \n\n    <!-- ════════ SIDEBAR ════════ -->\n    <div id=\"bms-sidebar\">\n        <div class=\"sb-logo\">\n            <div class=\"sb-logo-img\">\n                <img src=\"https://media.licdn.com/dms/image/v2/C4D0BAQFVkDMh7oXtqw/company-logo_200_200/company-logo_200_200/0/1631373402802?e=2147483647&v=beta&t=xZEpb0D0pUULkKjCJhgWDYfC6bkZvoRy3D8-bBV2k64\" alt=\"SRM AP\">\n            </div>\n            <div>\n                <div class=\"sb-brand-title\">SRM AP</div>\n                <div class=\"sb-brand-sub\">Digital Twin BMS</div>\n            </div>\n        </div>\n        <div class=\"sb-section-lbl\">Menu</div>\n        <ul class=\"sb-nav\">\n            <li class=\"sb-nav-item\" ng-class=\"{active: sp==='home'}\" ng-click=\"sp='home'\">\n                <div class=\"sb-nav-link\"><div class=\"sb-icon\"><i class=\"fas fa-home\"></i></div>Home</div>\n            </li>\n            <li class=\"sb-nav-item\" ng-class=\"{active: sp==='ch1'}\" ng-click=\"sp='ch1'\">\n                <div class=\"sb-nav-link\"><div class=\"sb-icon\"><i class=\"fas fa-microchip\"></i></div>Parameters 1–8</div>\n            </li>\n            <li class=\"sb-nav-item\" ng-class=\"{active: sp==='ch2'}\" ng-click=\"sp='ch2'\">\n                <div class=\"sb-nav-link\"><div class=\"sb-icon\"><i class=\"fas fa-battery-three-quarters\"></i></div>Parameters 9–16</div>\n            </li>\n            <li class=\"sb-nav-item\" ng-class=\"{active: sp==='ch3'}\" ng-click=\"sp='ch3'\">\n                <div class=\"sb-nav-link\"><div class=\"sb-icon\"><i class=\"fas fa-chart-area\"></i></div>Parameters 17–24</div>\n            </li>\n            <li class=\"sb-nav-item\" ng-class=\"{active: sp==='ch4'}\" ng-click=\"sp='ch4'\">\n                <div class=\"sb-nav-link\"><div class=\"sb-icon\"><i class=\"fas fa-project-diagram\"></i></div>Parameters 25–32</div>\n            </li>\n            <li class=\"sb-nav-item\" ng-class=\"{active: sp==='algo'}\" ng-click=\"sp='algo'\">\n                <div class=\"sb-nav-link\"><div class=\"sb-icon\"><i class=\"fas fa-brain\"></i></div>Algorithms</div>\n            </li>\n        </ul>\n        <!-- <div class=\"sb-footer\">\n            <div style=\"font-size:8px;font-weight:700;letter-spacing:1.2px;color:rgba(255,255,255,0.18);margin-bottom:4px;text-transform:uppercase;\">ThingSpeak IDs</div>\n            CH1: 3301782 &nbsp;·&nbsp; CH2: 3301835<br>\n            CH3: 3301844 &nbsp;·&nbsp; CH4: 3301854\n        </div> -->\n    </div>\n\n    <!-- ════════ MAIN ════════ -->\n    <div id=\"bms-main\">\n\n        <!-- Top Bar -->\n        <div id=\"bms-topbar\">\n            <div class=\"tb-title\">{{getTitle()}}</div>\n            <div class=\"tb-right\">\n                <div class=\"tb-time\"><i class=\"far fa-clock\"></i>&nbsp;Last updated: {{msg.payload.timestamp || '—'}}</div>\n                <div class=\"live-pill\"><div class=\"live-dot\"></div>LIVE</div>\n            </div>\n        </div>\n\n        <!-- Pages -->\n        <div id=\"bms-content\">\n\n            <!-- ══ HOME ══ -->\n            <div ng-if=\"sp==='home'\" class=\"home-page\">\n                <div class=\"home-card\">\n                    <div class=\"home-logo-wrap\">\n                        <img src=\"https://media.licdn.com/dms/image/v2/C4D0BAQFVkDMh7oXtqw/company-logo_200_200/company-logo_200_200/0/1631373402802?e=2147483647&v=beta&t=xZEpb0D0pUULkKjCJhgWDYfC6bkZvoRy3D8-bBV2k64\" alt=\"SRM AP\">\n                    </div>\n                    <div class=\"home-title\">Digital Twin BMS</div>\n                    <div class=\"home-tagline\">Battery Management System — Real-time monitoring of 32 parameters across 4 ThingSpeak channels. SRM AP Research.</div>\n                    <div class=\"home-stats\">\n                        <div class=\"hstat\">\n                            <div class=\"hstat-icon\" style=\"background:linear-gradient(135deg,#1565ff,#3b82f6)\"><i class=\"fas fa-database\"></i></div>\n                            <div class=\"hstat-value\">32</div>\n                            <div class=\"hstat-label\">Parameters</div>\n                        </div>\n                        <div class=\"hstat\">\n                            <div class=\"hstat-icon\" style=\"background:linear-gradient(135deg,#16a34a,#22c55e)\"><i class=\"fas fa-broadcast-tower\"></i></div>\n                            <div class=\"hstat-value\">4</div>\n                            <div class=\"hstat-label\">Channels</div>\n                        </div>\n                        <div class=\"hstat\">\n                            <div class=\"hstat-icon\" style=\"background:linear-gradient(135deg,#ea580c,#f97316)\"><i class=\"fas fa-bolt\"></i></div>\n                            <div class=\"hstat-value\">{{fmt(gs('ch1','V_sim'))}}</div>\n                            <div class=\"hstat-label\">V_sim (V)</div>\n                        </div>\n                        <div class=\"hstat\">\n                            <div class=\"hstat-icon\" style=\"background:linear-gradient(135deg,#7c3aed,#a855f7)\"><i class=\"fas fa-battery-half\"></i></div>\n                            <div class=\"hstat-value\">{{fmt(gs('ch1','SOC_sim'))}}</div>\n                            <div class=\"hstat-label\">SOC_sim (%)</div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <!-- ══ CH1 — Parameters 1-8 ══ -->\n            <div ng-if=\"sp==='ch1'\" class=\"ch-page\">\n                <div class=\"pg-hdr\">\n                    <div class=\"pg-hdr-icon ic-b\"><i class=\"fas fa-microchip\"></i></div>\n                    <div>\n                        <div class=\"pg-hdr-title\">Digital Twin BMS — Parameters 1–8</div>\n                        <div class=\"pg-hdr-sub\">Channel ID: 3301782 &nbsp;|&nbsp; API Key: JKLKCO8AK0MRW4CW</div>\n                    </div>\n                </div>\n                <div class=\"sec-hdr\"><i class=\"fas fa-microchip\"></i> Simulated &amp; Hardware Parameters</div>\n                <div class=\"data-grid\">\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">V_sim</div><div class=\"dc-icon ic-b\"><i class=\"fas fa-bolt\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch1','V_sim'))}}</div><div class=\"dc-unit\">Volts</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-b\" style=\"width:{{bar(gs('ch1','V_sim'),5)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">I_sim</div><div class=\"dc-icon ic-g\"><i class=\"fas fa-tachometer-alt\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch1','I_sim'))}}</div><div class=\"dc-unit\">Amps</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-g\" style=\"width:{{bar(gs('ch1','I_sim'),10)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">SOC_sim</div><div class=\"dc-icon ic-y\"><i class=\"fas fa-battery-half\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch1','SOC_sim'))}}</div><div class=\"dc-unit\">% &nbsp; State of Charge</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-y\" style=\"width:{{bar(gs('ch1','SOC_sim'),100)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">SOH_sim</div><div class=\"dc-icon ic-r\"><i class=\"fas fa-heart\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch1','SOH_sim'))}}</div><div class=\"dc-unit\">% &nbsp; State of Health</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-r\" style=\"width:{{bar(gs('ch1','SOH_sim'),100)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">T_sim</div><div class=\"dc-icon ic-o\"><i class=\"fas fa-thermometer-half\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch1','T_sim'))}}</div><div class=\"dc-unit\">°C &nbsp; Temperature</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-o\" style=\"width:{{bar(gs('ch1','T_sim'),80)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">RUL_sim</div><div class=\"dc-icon ic-t\"><i class=\"fas fa-redo\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch1','RUL_sim'))}}</div><div class=\"dc-unit\">Cycles &nbsp; Remaining Useful Life</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-t\" style=\"width:{{bar(gs('ch1','RUL_sim'),1000)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">health_index_sim</div><div class=\"dc-icon ic-p\"><i class=\"fas fa-shield-alt\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch1','health_index_sim'))}}</div><div class=\"dc-unit\">Health Index</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-p\" style=\"width:{{bar(gs('ch1','health_index_sim'),1)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">V_hw</div><div class=\"dc-icon ic-pk\"><i class=\"fas fa-bolt\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch1','V_hw'))}}</div><div class=\"dc-unit\">Volts &nbsp; Hardware Voltage</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-pk\" style=\"width:{{bar(gs('ch1','V_hw'),5)}}%\"></div></div></div>\n                    </div>\n                </div>\n            </div>\n\n            <!-- ══ CH2 — Parameters 9-16 ══ -->\n            <div ng-if=\"sp==='ch2'\" class=\"ch-page\">\n                <div class=\"pg-hdr\">\n                    <div class=\"pg-hdr-icon ic-g\"><i class=\"fas fa-battery-three-quarters\"></i></div>\n                    <div>\n                        <div class=\"pg-hdr-title\">Digital Twin BMS — Parameters 9–16</div>\n                        <div class=\"pg-hdr-sub\">Channel ID: 3301835 &nbsp;|&nbsp; API Key: E7OOJBGDEHIK4XA5</div>\n                    </div>\n                </div>\n                <div class=\"sec-hdr\"><i class=\"fas fa-battery-three-quarters\"></i> Hardware &amp; Difference Parameters</div>\n                <div class=\"data-grid\">\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">I_hw</div><div class=\"dc-icon ic-g\"><i class=\"fas fa-tachometer-alt\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch2','I_hw'))}}</div><div class=\"dc-unit\">Amps &nbsp; Hardware Current</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-g\" style=\"width:{{bar(gs('ch2','I_hw'),10)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">SOC_hw</div><div class=\"dc-icon ic-y\"><i class=\"fas fa-battery-half\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch2','SOC_hw'))}}</div><div class=\"dc-unit\">% &nbsp; HW State of Charge</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-y\" style=\"width:{{bar(gs('ch2','SOC_hw'),100)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">SOH_hw</div><div class=\"dc-icon ic-r\"><i class=\"fas fa-heartbeat\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch2','SOH_hw'))}}</div><div class=\"dc-unit\">% &nbsp; HW State of Health</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-r\" style=\"width:{{bar(gs('ch2','SOH_hw'),100)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">T_hw</div><div class=\"dc-icon ic-o\"><i class=\"fas fa-thermometer-half\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch2','T_hw'))}}</div><div class=\"dc-unit\">°C &nbsp; HW Temperature</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-o\" style=\"width:{{bar(gs('ch2','T_hw'),80)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">RUL_hw</div><div class=\"dc-icon ic-t\"><i class=\"fas fa-redo-alt\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch2','RUL_hw'))}}</div><div class=\"dc-unit\">Cycles &nbsp; HW Remaining Useful Life</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-t\" style=\"width:{{bar(gs('ch2','RUL_hw'),1000)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">health_idx_hw</div><div class=\"dc-icon ic-p\"><i class=\"fas fa-shield-alt\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch2','health_idx_hw'))}}</div><div class=\"dc-unit\">HW Health Index</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-p\" style=\"width:{{bar(gs('ch2','health_idx_hw'),1)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">V_diff</div><div class=\"dc-icon ic-b\"><i class=\"fas fa-arrows-alt-v\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch2','V_diff'))}}</div><div class=\"dc-unit\">Volts &nbsp; Voltage Difference</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-b\" style=\"width:{{bar(gs('ch2','V_diff'),1)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">I_diff</div><div class=\"dc-icon ic-pk\"><i class=\"fas fa-arrows-alt-v\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch2','I_diff'))}}</div><div class=\"dc-unit\">Amps &nbsp; Current Difference</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-pk\" style=\"width:{{bar(gs('ch2','I_diff'),1)}}%\"></div></div></div>\n                    </div>\n                </div>\n            </div>\n\n            <!-- ══ CH3 — Parameters 17-24 ══ -->\n            <div ng-if=\"sp==='ch3'\" class=\"ch-page\">\n                <div class=\"pg-hdr\">\n                    <div class=\"pg-hdr-icon ic-o\"><i class=\"fas fa-chart-area\"></i></div>\n                    <div>\n                        <div class=\"pg-hdr-title\">Digital Twin BMS — Parameters 17–24</div>\n                        <div class=\"pg-hdr-sub\">Channel ID: 3301844 &nbsp;|&nbsp; API Key: GAFKA45LYKNR0V7R</div>\n                    </div>\n                </div>\n                <div class=\"sec-hdr\"><i class=\"fas fa-chart-area\"></i> Difference &amp; RMSE Parameters</div>\n                <div class=\"data-grid\">\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">SOC_diff</div><div class=\"dc-icon ic-y\"><i class=\"fas fa-battery-half\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch3','SOC_diff'))}}</div><div class=\"dc-unit\">% &nbsp; SOC Difference</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-y\" style=\"width:{{bar(gs('ch3','SOC_diff'),10)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">SOH_diff</div><div class=\"dc-icon ic-r\"><i class=\"fas fa-heart\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch3','SOH_diff'))}}</div><div class=\"dc-unit\">% &nbsp; SOH Difference</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-r\" style=\"width:{{bar(gs('ch3','SOH_diff'),10)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">T_diff</div><div class=\"dc-icon ic-o\"><i class=\"fas fa-thermometer-half\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch3','T_diff'))}}</div><div class=\"dc-unit\">°C &nbsp; Temp Difference</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-o\" style=\"width:{{bar(gs('ch3','T_diff'),5)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">RUL_diff</div><div class=\"dc-icon ic-t\"><i class=\"fas fa-redo\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch3','RUL_diff'))}}</div><div class=\"dc-unit\">Cycles &nbsp; RUL Difference</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-t\" style=\"width:{{bar(gs('ch3','RUL_diff'),100)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">health_diff</div><div class=\"dc-icon ic-p\"><i class=\"fas fa-shield-alt\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch3','health_diff'))}}</div><div class=\"dc-unit\">Health Difference</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-p\" style=\"width:{{bar(gs('ch3','health_diff'),0.5)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">RMSE_V</div><div class=\"dc-icon ic-b\"><i class=\"fas fa-chart-line\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch3','RMSE_V'))}}</div><div class=\"dc-unit\">V &nbsp; Voltage RMSE</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-b\" style=\"width:{{bar(gs('ch3','RMSE_V'),0.5)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">RMSE_I</div><div class=\"dc-icon ic-g\"><i class=\"fas fa-chart-line\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch3','RMSE_I'))}}</div><div class=\"dc-unit\">A &nbsp; Current RMSE</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-g\" style=\"width:{{bar(gs('ch3','RMSE_I'),0.5)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">RMSE_SOC</div><div class=\"dc-icon ic-pk\"><i class=\"fas fa-chart-bar\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch3','RMSE_SOC'))}}</div><div class=\"dc-unit\">% &nbsp; SOC RMSE</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-pk\" style=\"width:{{bar(gs('ch3','RMSE_SOC'),5)}}%\"></div></div></div>\n                    </div>\n                </div>\n            </div>\n\n            <!-- ══ CH4 — Parameters 25-32 ══ -->\n            <div ng-if=\"sp==='ch4'\" class=\"ch-page\">\n                <div class=\"pg-hdr\">\n                    <div class=\"pg-hdr-icon ic-p\"><i class=\"fas fa-project-diagram\"></i></div>\n                    <div>\n                        <div class=\"pg-hdr-title\">Digital Twin BMS — Parameters 25–32</div>\n                        <div class=\"pg-hdr-sub\">Channel ID: 3301854 &nbsp;|&nbsp; API Key: S4690KBYUG75SLYN</div>\n                    </div>\n                </div>\n                <div class=\"sec-hdr\"><i class=\"fas fa-project-diagram\"></i> Efficiency, Imbalance &amp; Stress Parameters</div>\n                <div class=\"data-grid\">\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">RMSE_SOH</div><div class=\"dc-icon ic-r\"><i class=\"fas fa-chart-bar\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch4','RMSE_SOH'))}}</div><div class=\"dc-unit\">% &nbsp; SOH RMSE</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-r\" style=\"width:{{bar(gs('ch4','RMSE_SOH'),5)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">imb_sim</div><div class=\"dc-icon ic-b\"><i class=\"fas fa-balance-scale\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch4','imb_sim'))}}</div><div class=\"dc-unit\">mV &nbsp; Simulated Imbalance</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-b\" style=\"width:{{bar(gs('ch4','imb_sim'),100)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">imb_hw</div><div class=\"dc-icon ic-g\"><i class=\"fas fa-balance-scale\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch4','imb_hw'))}}</div><div class=\"dc-unit\">mV &nbsp; Hardware Imbalance</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-g\" style=\"width:{{bar(gs('ch4','imb_hw'),100)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">chg_eff</div><div class=\"dc-icon ic-y\"><i class=\"fas fa-plug\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch4','chg_eff'))}}</div><div class=\"dc-unit\">% &nbsp; Charging Efficiency</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-y\" style=\"width:{{bar(gs('ch4','chg_eff'),100)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">coul_eff</div><div class=\"dc-icon ic-t\"><i class=\"fas fa-percentage\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch4','coul_eff'))}}</div><div class=\"dc-unit\">% &nbsp; Coulombic Efficiency</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-t\" style=\"width:{{bar(gs('ch4','coul_eff'),100)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">algo_sim</div><div class=\"dc-icon ic-p\"><i class=\"fas fa-code-branch\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch4','algo_sim'))}}</div><div class=\"dc-unit\">Algorithm Output (Sim)</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-p\" style=\"width:{{bar(gs('ch4','algo_sim'),10)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">algo_hw</div><div class=\"dc-icon ic-o\"><i class=\"fas fa-code-branch\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch4','algo_hw'))}}</div><div class=\"dc-unit\">Algorithm Output (HW)</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-o\" style=\"width:{{bar(gs('ch4','algo_hw'),10)}}%\"></div></div></div>\n                    </div>\n                    <div class=\"data-card\">\n                        <div class=\"dc-header\"><div class=\"dc-title\">stress_sim</div><div class=\"dc-icon ic-r\"><i class=\"fas fa-exclamation-triangle\"></i></div></div>\n                        <div class=\"dc-value\">{{fmt(gs('ch4','stress_sim'))}}</div><div class=\"dc-unit\">Stress Index (Sim)</div>\n                        <div class=\"dc-bar-wrap\"><div class=\"dc-bar-track\"><div class=\"dc-bar ic-r\" style=\"width:{{bar(gs('ch4','stress_sim'),1)}}%\"></div></div></div>\n                    </div>\n                </div>\n            </div>\n\n            <!-- ══ ALGORITHMS PAGE ══ -->\n            <div ng-if=\"sp==='algo'\" class=\"algo-page\">\n\n                <div class=\"pg-hdr\">\n                    <div class=\"pg-hdr-icon ic-b\"><i class=\"fas fa-brain\"></i></div>\n                    <div>\n                        <div class=\"pg-hdr-title\">Digital Twin BMS — Architecture &amp; Algorithms</div>\n                        <div class=\"pg-hdr-sub\">Full system pipeline · Simulation &amp; Hardware branches · Novel algorithms</div>\n                    </div>\n                </div>\n\n                <!-- ════ ARCHITECTURE FLOWCHART ════ -->\n                <div class=\"fc-wrap\">\n                    <div class=\"fc-title\">Digital Twin BMS — Architecture Pipeline</div>\n\n                    <div class=\"fc-branches\">\n\n                        <!-- Simulation Branch -->\n                        <div class=\"fc-branch sim\">\n                            <div class=\"fc-branch-title\" style=\"color:#16a34a;\">🔵 Simulation Branch</div>\n                            <div class=\"fc-block\">Battery Model &amp; Power Conversion</div>\n                            <div class=\"fc-arrow\"></div>\n                            <div class=\"fc-block\" style=\"border-color:#1565ff;color:#1565ff;font-weight:600;\">AEKF / Li‑Mamba</div>\n                            <div class=\"fc-arrow\"></div>\n                            <div class=\"fc-block\" style=\"border-color:#16a34a;color:#16a34a;font-weight:600;\">Parameter Estimation + WOA</div>\n                            <div class=\"fc-arrow\"></div>\n                            <div class=\"fc-block\" style=\"border-color:#ea580c;color:#ea580c;font-weight:600;\">Feature Engineering (Multi-Scale + GPR)</div>\n                            <div class=\"fc-arrow\"></div>\n                            <div class=\"fc-block\" style=\"border-color:#7c3aed;color:#7c3aed;font-weight:600;\">BatteryGPT / Transformer</div>\n                            <div class=\"fc-arrow\"></div>\n                            <div class=\"fc-block\" style=\"border-color:#0891b2;color:#0891b2;font-weight:600;\">Federated Ensemble</div>\n                        </div>\n\n                        <!-- Hardware Branch -->\n                        <div class=\"fc-branch hw\">\n                            <div class=\"fc-branch-title\" style=\"color:#ea580c;\">🟠 Hardware Branch</div>\n                            <div class=\"fc-block\">DAQ &amp; Physical Battery</div>\n                            <div class=\"fc-arrow\"></div>\n                            <div class=\"fc-block\" style=\"border-color:#1565ff;color:#1565ff;font-weight:600;\">AEKF / Li‑Mamba</div>\n                            <div class=\"fc-arrow\"></div>\n                            <div class=\"fc-block\" style=\"border-color:#16a34a;color:#16a34a;font-weight:600;\">Parameter Estimation + WOA</div>\n                            <div class=\"fc-arrow\"></div>\n                            <div class=\"fc-block\" style=\"border-color:#ea580c;color:#ea580c;font-weight:600;\">Feature Engineering (Multi-Scale + GPR)</div>\n                            <div class=\"fc-arrow\"></div>\n                            <div class=\"fc-block\" style=\"border-color:#7c3aed;color:#7c3aed;font-weight:600;\">BatteryGPT / Transformer</div>\n                            <div class=\"fc-arrow\"></div>\n                            <div class=\"fc-block\" style=\"border-color:#0891b2;color:#0891b2;font-weight:600;\">Federated Ensemble</div>\n                        </div>\n\n                    </div><!-- /fc-branches -->\n\n                    <!-- Merge + Comparison -->\n                    <div class=\"fc-merge\">\n                        <div class=\"fc-arrow-h\"></div>\n                        <div class=\"fc-compare\">\n                            ⬇️ Comparison Module<br>\n                            <span>32 outputs: differences, RMSE, algorithms</span>\n                        </div>\n                        <div class=\"fc-arrow-h\"></div>\n                    </div>\n\n                    <!-- Outputs -->\n                    <div class=\"fc-outputs\">\n                        <div class=\"fc-out fc-out-1\">📡 ThingSpeak<span>4 channels × 8 fields</span></div>\n                        <div class=\"fc-out fc-out-2\">📊 Node‑RED Dashboard<span>32 parameters live</span></div>\n                        <div class=\"fc-out fc-out-3\">💾 CSV Export<span>Full data log</span></div>\n                    </div>\n\n                    <div class=\"fc-footer\">Algorithms: AEKF &nbsp;·&nbsp; Li‑Mamba &nbsp;·&nbsp; WOA &nbsp;·&nbsp; GPR &nbsp;·&nbsp; BatteryGPT &nbsp;·&nbsp; Federated Ensemble &nbsp;·&nbsp; Multi‑Scale Feature Engineering</div>\n                </div><!-- /fc-wrap -->\n\n                <!-- ════ NOVEL ALGORITHMS ════ -->\n                <div class=\"col-title\" style=\"margin-top:8px;\">Novel Algorithms Introduced</div>\n                <div class=\"novel-grid-row\">\n\n                    <div class=\"novel-card\">\n                        <div class=\"novel-head\">\n                            <div class=\"novel-icon\" style=\"background:linear-gradient(135deg,#1565ff,#3b82f6)\"><i class=\"fas fa-wave-square\"></i></div>\n                            <div>\n                                <div class=\"novel-name\">Li‑Mamba</div>\n                                <span class=\"novel-tag tag-b\">Selective State Space Model</span>\n                            </div>\n                        </div>\n                        <div class=\"novel-desc\">First application of selective state space models to battery SOC estimation. Achieves <strong>2.6× faster</strong> inference and <strong>4.4× lower memory</strong> than Transformers, with <strong>0.65% RMSE</strong>.</div>\n                    </div>\n\n                    <div class=\"novel-card\">\n                        <div class=\"novel-head\">\n                            <div class=\"novel-icon\" style=\"background:linear-gradient(135deg,#16a34a,#22c55e)\"><i class=\"fas fa-robot\"></i></div>\n                            <div>\n                                <div class=\"novel-name\">BatteryGPT</div>\n                                <span class=\"novel-tag tag-g\">Transformer-based Predictor</span>\n                            </div>\n                        </div>\n                        <div class=\"novel-desc\">Purpose-built Transformer for battery degradation forecasting. Self-attention for long-range temporal modeling of SOC, SOH, and RUL prediction sequences.</div>\n                    </div>\n\n                    <div class=\"novel-card\">\n                        <div class=\"novel-head\">\n                            <div class=\"novel-icon\" style=\"background:linear-gradient(135deg,#ea580c,#f97316)\"><i class=\"fas fa-network-wired\"></i></div>\n                            <div>\n                                <div class=\"novel-name\">Federated Ensemble with Uncertainty</div>\n                                <span class=\"novel-tag tag-o\">5-Model Ensemble</span>\n                            </div>\n                        </div>\n                        <div class=\"novel-desc\">RF + XGBoost + LSTM + MLP + GP with <strong>aleatoric/epistemic</strong> uncertainty separation, confidence calibration, and online learning for continual adaptation.</div>\n                    </div>\n\n                    <div class=\"novel-card\">\n                        <div class=\"novel-head\">\n                            <div class=\"novel-icon\" style=\"background:linear-gradient(135deg,#7c3aed,#a855f7)\"><i class=\"fas fa-sliders-h\"></i></div>\n                            <div>\n                                <div class=\"novel-name\">WOA‑Optimized Parameter Estimation</div>\n                                <span class=\"novel-tag tag-p\">Whale Optimization Algorithm</span>\n                            </div>\n                        </div>\n                        <div class=\"novel-desc\">Whale Optimization Algorithm for adaptive real-time tuning of battery internal resistance and capacity. Minimizes voltage prediction error every <strong>300 seconds</strong>.</div>\n                    </div>\n\n                    <div class=\"novel-card\">\n                        <div class=\"novel-head\">\n                            <div class=\"novel-icon\" style=\"background:linear-gradient(135deg,#0891b2,#06b6d4)\"><i class=\"fas fa-layer-group\"></i></div>\n                            <div>\n                                <div class=\"novel-name\">Multi‑Scale GPR Feature Engineering</div>\n                                <span class=\"novel-tag tag-t\">Gaussian Process Regression</span>\n                            </div>\n                        </div>\n                        <div class=\"novel-desc\">GPR-based synthetic anomaly generation across <strong>396 features</strong> (3 scales × 22 params × 6 stats). Significantly improves model robustness and training data quality.</div>\n                    </div>\n\n                </div><!-- /novel-grid-row -->\n\n            </div><!-- /algo page -->\n\n        </div><!-- /bms-content -->\n    </div><!-- /bms-main -->\n</div><!-- /bms-root -->\n\n<script>\n(function(scope) {\n    scope.getTitle = function() {\n        var t = { home:'Dashboard', ch1:'Parameters 1\\u20138', ch2:'Parameters 9\\u201316', ch3:'Parameters 17\\u201324', ch4:'Parameters 25\\u201332' };\n        return t[scope.sp] || 'Digital Twin BMS';\n    };\n\n    scope.gs = function(ch, key) {\n        try { return (scope.msg.payload[ch] && scope.msg.payload[ch][key]) || null; }\n        catch(e) { return null; }\n    };\n\n    scope.fmt = function(val) {\n        if (val === null || val === undefined || val === 'NO DATA') return 'NO DATA';\n        var n = parseFloat(val);\n        if (isNaN(n)) return val;\n        return Number.isInteger(n) ? n.toString() : n.toFixed(3);\n    };\n\n    scope.bar = function(val, max) {\n        var v = parseFloat(val);\n        if (!max || isNaN(v)) return 0;\n        return Math.min(100, Math.max(0, (v / max) * 100)).toFixed(0);\n    };\n\n    if (!scope.msg) scope.msg = { payload: {} };\n    if (!scope.msg.payload) scope.msg.payload = {};\n    ['ch1','ch2','ch3','ch4'].forEach(function(c){ if (!scope.msg.payload[c]) scope.msg.payload[c] = {}; });\n    if (!scope.sp) scope.sp = 'home';\n})(scope);\n</script>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2210,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "22f2b17932e8645c",
+        "type": "debug",
+        "z": "1d9a2763b7f936ff",
+        "name": "debug",
+        "active": true,
+        "tosidebar": true,
+        "x": 2160,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "grp_bms",
+        "type": "ui_group",
+        "name": "BMS Dashboard",
+        "tab": "tab_bms",
+        "order": 1,
+        "disp": false,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "tab_bms",
+        "type": "ui_tab",
+        "name": "Digital Twin BMS",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]

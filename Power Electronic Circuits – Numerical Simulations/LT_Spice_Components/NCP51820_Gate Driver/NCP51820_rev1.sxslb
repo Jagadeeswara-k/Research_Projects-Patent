@@ -1,0 +1,44 @@
+SIMetrixFile type=schematic format=1.0 revision=8
+.SymbolLibrary
+.Symbol
+Attributes format=1.0 revision=8 name="NCP51820_1_ASCII" description="NCP51820_1" catalog="Vendor;PSU Controllers" track=1
+Segment x1=120 y1=-120 x2=1316 y2=-120 
+Segment x1=120 y1=-120 x2=120 y2=1080 
+Segment x1=1320 y1=-120 x2=1320 y2=1080 
+Segment x1=120 y1=0 x2=0 y2=0 
+Segment x1=1440 y1=0 x2=1320 y2=0 
+Segment x1=0 y1=120 x2=120 y2=120 
+Segment x1=1440 y1=120 x2=1320 y2=120 
+Segment x1=0 y1=240 x2=120 y2=240 
+Segment x1=1440 y1=240 x2=1320 y2=240 
+Segment x1=0 y1=360 x2=120 y2=360 
+Segment x1=1440 y1=360 x2=1320 y2=360 
+Segment x1=0 y1=480 x2=120 y2=480 
+Segment x1=1440 y1=480 x2=1320 y2=480 
+Segment x1=0 y1=600 x2=120 y2=600 
+Segment x1=1440 y1=600 x2=1320 y2=600 
+Segment x1=1440 y1=720 x2=1320 y2=720 
+Segment x1=1440 y1=840 x2=1320 y2=840 
+Segment x1=1440 y1=960 x2=1320 y2=960 
+Segment x1=120 y1=1080 x2=1316 y2=1080 
+Pin name="DT" order=10 x=0 y=480 visible=1 xlabel=180 ylabel=0 align=LeftBase rotated=0
+Pin name="ENA" order=8 x=0 y=240 visible=1 xlabel=180 ylabel=0 align=LeftBase rotated=0
+Pin name="HIN" order=7 x=0 y=120 visible=1 xlabel=180 ylabel=0 align=LeftBase rotated=0
+Pin name="HO_SNK" order=4 x=1440 y=240 visible=1 xlabel=-160 ylabel=0 align=RightBase rotated=0
+Pin name="HO_SRC" order=5 x=1440 y=360 visible=1 xlabel=-160 ylabel=0 align=RightBase rotated=0
+Pin name="LIN" order=9 x=0 y=360 visible=1 xlabel=180 ylabel=0 align=LeftBase rotated=0
+Pin name="LO_SNK" order=13 x=1440 y=840 visible=1 xlabel=-160 ylabel=0 align=RightBase rotated=0
+Pin name="LO_SRC" order=12 x=1440 y=720 visible=1 xlabel=-160 ylabel=0 align=RightBase rotated=0
+Pin name="PGND" order=15 x=1440 y=960 visible=1 xlabel=-160 ylabel=0 align=RightBase rotated=0
+Pin name="SGND" order=14 x=0 y=600 visible=1 xlabel=180 ylabel=0 align=LeftBase rotated=0
+Pin name="SW" order=6 x=1440 y=480 visible=1 xlabel=-160 ylabel=0 align=RightBase rotated=0
+Pin name="VBST" order=2 x=1440 y=0 visible=1 xlabel=-160 ylabel=0 align=RightBase rotated=0
+Pin name="VDD" order=1 x=0 y=0 visible=1 xlabel=348 ylabel=32 align=RightBase rotated=0
+Pin name="VDH" order=3 x=1440 y=120 visible=1 xlabel=-160 ylabel=0 align=RightBase rotated=0
+Pin name="VDL" order=11 x=1440 y=600 visible=1 xlabel=-160 ylabel=0 align=RightBase rotated=0
+Property name="Model" value="X" autopos=1 normal=Left rotated=Left visible=0 font=Default order=-1
+Property name="Ref" value="U?" autopos=1 normal=Top rotated=Right font=Default order=-1
+Property name="SIMULATOR" value="Simplis" autopos=1 normal=Left rotated=Left protected=1 visible=0 font=Default order=-1
+Property name="VALUE" value="NCP51820_1" autopos=1 normal=Top rotated=Right visible=0 font=Default order=-1
+.EndSymbol
+.EndSymbolLibrary

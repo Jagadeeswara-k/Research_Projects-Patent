@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NCP51820
+D High Speed Half-Bridge Driver for GaN Power Switches High-Speed 650V 200 V/ns dV/dt
+K
+F https://www.onsemi.com/download/data-sheet/pdf/ncp51820-d.pdf
+$ENDCMP
+#
+#End Doc Library

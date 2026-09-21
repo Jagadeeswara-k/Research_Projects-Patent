@@ -1,0 +1,2 @@
+Change Component Designator: OldDesignator=C4 NewDesignator=connector
+Added Member To Class: ClassName=Gatedriver_sch_lib Member=Component connector 1-770166-1

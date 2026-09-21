@@ -1,0 +1,244 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "NCP51820"
+   (description "High Speed Half-Bridge Driver for GaN Power Switches High-Speed 650V 200 V/ns dV/dt")
+   (family "ANA")
+   (package "NCP51820")
+   (attribute "Datasheet Link" "https://www.onsemi.com/download/data-sheet/pdf/ncp51820-d.pdf")
+   (attribute "Geometry.Height" "0.9mm")
+   (attribute "Manufacturer_Name" "onsemi")
+   (attribute "Manufacturer_Part_Number" "NCP51820")
+   (attribute "Mouser Part Number" "N/A")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/onsemi/NCP51820?qs=vEM7xhTegWhaPMdkL3AwCA%3D%3D")
+   (attribute "Arrow Part Number" "")
+   (attribute "Arrow Price/Stock" "")
+   (gate
+    (symbol "NCP51820")
+    (pin "VDDH" 1 PS)
+    (pin "HOSRC" 2 PS)
+    (pin "HOSNK" 3 PS)
+    (pin "SW" 4 PS)
+    (pin "VDDL" 5 PS)
+    (pin "LOSRC" 6 PS)
+    (pin "LOSNK" 7 PS)
+    (pin "PGND" 8 PS)
+    (pin "DT" 9 PS)
+    (pin "SGND" 10 PS)
+    (pin "LIN" 11 PS)
+    (pin "HIN" 12 PS)
+    (pin "EN" 13 PS)
+    (pin "VDD" 14 PS)
+    (pin "VBST" 15 PS)
+   )
+  )
+  (symbol "NCP51820"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 400) (pt 1000 400) (pt 1000 -900) (pt 200 -900) (pt 200 400) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -200) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -300) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 400 -1100) (rot 90) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 500 -1100) (rot 90) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 600 -1100) (rot 90) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 700 -1100) (rot 90) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -400) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -300) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -200) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 600 600) (rot 90) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 500 600) (rot 90) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "NCP51820"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2 2)
+      (pt 2 2)
+      (pt 2 -2)
+      (pt -2 -2)
+      (pt -2 2))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -3.3 3.3)
+      (pt 3.3 3.3)
+      (pt 3.3 -3.3)
+      (pt -3.3 -3.3)
+      (pt -3.3 3.3))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 2 -1.4)
+      (pt 2 -2)
+      (pt 1.4 -2))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 2 1.6)
+      (pt 2 2)
+      (pt 1.4 2))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 0.6 2)
+      (pt -0.6 2))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -1.6 2)
+      (pt -2 2)
+      (pt -2 1.4))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -1.6 2)
+      (pt -1.4 2))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -2 -1)
+      (pt -2 -2)
+      (pt -1 -2))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2.8 1)
+      (arc (pt -2.800 1.000) (pt -2.800 0.950) (pt -2.700 1.050) (start 180.0) (sweep 180.0))
+      (pt -2.7 1)
+      (arc (pt -2.700 1.000) (pt -2.800 0.950) (pt -2.700 1.050) (start 180.0) (sweep .0))
+      (pt -2.8 1))))
+   (leg 1 (pt -1.925 1.000) (padstack 0))
+   (leg 2 (pt -1.925 0.500) (padstack 0))
+   (leg 3 (pt -1.925 0.000) (padstack 0))
+   (leg 4 (pt -1.925 -0.500) (padstack 0))
+   (leg 5 (pt -0.500 -1.925) (padstack 5))
+   (leg 6 (pt 0.000 -1.925) (padstack 6))
+   (leg 7 (pt 0.500 -1.925) (padstack 7))
+   (leg 8 (pt 1.000 -1.925) (padstack 8))
+   (leg 9 (pt 1.925 -1.000) (padstack 0))
+   (leg 10 (pt 1.925 -0.500) (padstack 0))
+   (leg 11 (pt 1.925 0.000) (padstack 0))
+   (leg 12 (pt 1.925 0.500) (padstack 0))
+   (leg 13 (pt 1.925 1.000) (padstack 0))
+   (leg 14 (pt 1.000 1.925) (padstack 14))
+   (leg 15 (pt -1.000 1.925) (padstack 15))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 0.320 0.750 0 0 0.000))
+   )
+   (padstack 5
+    (plated false)
+    (pad (layer TCOP) (rectf 0.320 0.750 0 0 90.000))
+   )
+   (padstack 6
+    (plated false)
+    (pad (layer TCOP) (rectf 0.320 0.750 0 0 90.000))
+   )
+   (padstack 7
+    (plated false)
+    (pad (layer TCOP) (rectf 0.320 0.750 0 0 90.000))
+   )
+   (padstack 8
+    (plated false)
+    (pad (layer TCOP) (rectf 0.320 0.750 0 0 90.000))
+   )
+   (padstack 14
+    (plated false)
+    (pad (layer TCOP) (rectf 0.320 0.750 0 0 90.000))
+   )
+   (padstack 15
+    (plated false)
+    (pad (layer TCOP) (rectf 0.320 0.750 0 0 90.000))
+   )
+   (model "NCP51820.stp"
+    (euler 0 0 0)
+    (offset 0.18000000715255737 -0.11999999731779099 0)
+   )
+  )
+ )
+)
